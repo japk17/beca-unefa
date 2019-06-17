@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['role:super-admin|lector|moderador']], function() {
     Route::resource('usuarios', 'UsersController');
 });
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('cuposbecas', 'CuposBecasController');
+});
 Route::get('guia/',function(){
     return view('guia');
 });
