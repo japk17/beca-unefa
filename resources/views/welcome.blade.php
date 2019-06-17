@@ -61,6 +61,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                border-bottom: 4px solid #2d90c4;
             }
 
             .m-b-md {
@@ -91,7 +92,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <h3 style="color:#2d90c4;text-shadow: 5px 5px 5px #FF0000,-5px -5px 5px #fff;";>
+                    SISTEMA DE BECA</h3>
                 </div>
                 <!--<div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
