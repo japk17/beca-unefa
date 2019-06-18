@@ -17,6 +17,7 @@
                       <table class="table">
                         <thead>
                           <th>Nombre</th>
+                          <th>Apellido</th>
                           <th>Correo</th>
                           <th>Rol</th>
                           <th>Acciones</th>
@@ -24,10 +25,11 @@
                         <tbody>
                           @foreach ($users as $usuario)
                             <tr>
-                              <td>{{ $usuario->name }}</td>
-                              <td>{{ $usuario->email }}</td>
-                              <td>{{ $usuario->roles->implode('name', ', ') }}</td>
-                              <td>
+                              <td nowrap>{{ $usuario->name }}</td>
+                              <td nowrap>{{ $usuario->last_name }}</td>
+                              <td nowrap>{{ $usuario->email }}</td>
+                              <td nowrap>{{ $usuario->roles->implode('name', ', ') }}</td>
+                              <td nowrap>
                                 @can('update user')
                                     <a href="{{ url('usuarios/'.$usuario->id.'/edit') }}" class="btn btn-primary">Editar</a>
                                 @endcan

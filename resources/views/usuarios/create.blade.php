@@ -12,9 +12,13 @@
             <form action="{{ url('usuarios') }}" method="post">
               @csrf
               <div class="form-group">
-                <label for="name">Nombre y Apellido</label>
+                <label for="name">Nombre</label>
                 <input type="text" name="name" required class="form-control">
               </div>
+              <div class="form-group">
+                  <label for="last_name">Apellido</label>
+                  <input type="text" name="last_name" required class="form-control">
+                </div>
               <div class="form-group">
                 <label for="email">Correo</label>
                 <input type="text" name="email" required class="form-control">
@@ -32,7 +36,7 @@
                 </select>
               </div>
               <div class="justify-content-end">
-                <input type="submit" value="Enviar" class="btn btn-success">
+                <input type="submit" value="Crear" class="btn btn-success">
               </div>
             </form>
           </div>
